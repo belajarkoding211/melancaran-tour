@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Manage - Melancaran</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="checkRole('admin'); adminLoadDestinations(); adminLoadGuides();">
+
+<div class="hero">
+  <div class="container">
+
+    <div class="logo">
+      MELANCARAN
+      <small>Admin Manage</small>
+    </div>
+
+    <div class="navbar">
+      <a href="admin-dashboard.html">DASHBOARD</a>
+      <a href="admin-manage.html">KELOLA DATA</a>
+      <a href="destinations.html">LOKASI</a>
+      <a href="guides.html">GUIDE</a>
+      <a href="#" onclick="logout()">LOGOUT</a>
+    </div>
+
+    <div class="content-box">
+      <h1>Kelola Data Website</h1>
+      <p>
+        Admin dapat menambahkan destinasi wisata Bali dan guide lokal.
+        Data akan langsung tampil otomatis di halaman Lokasi dan Guide.
+      </p>
+    </div>
+
+    <!-- FORM TAMBAH DESTINASI -->
+    <h2 class="section-title">Tambah Destinasi</h2>
+
+    <div class="form-box" style="width:70%;">
+      <input type="text" id="destName" placeholder="Nama Destinasi">
+      <input type="text" id="destImage" placeholder="Link Gambar (URL)">
+      <button onclick="addDestination()">Tambah Destinasi</button>
+    </div>
+
+    <h2 class="section-title">Daftar Destinasi</h2>
+    <div class="scroll-container" id="adminDestinationList"></div>
+
+
+    <!-- FORM TAMBAH GUIDE -->
+    <h2 class="section-title">Tambah Guide</h2>
+
+    <div class="form-box" style="width:70%;">
+      <input type="text" id="guideName" placeholder="Nama Guide">
+      <input type="text" id="guideLocation" placeholder="Lokasi Guide (Ubud, Kuta, dll)">
+      <input type="text" id="guideSpecialization" placeholder="Spesialisasi (Budaya, Kuliner, Hiking)">
+      <input type="text" id="guideLanguage" placeholder="Bahasa (Indonesia, English)">
+      <input type="text" id="guideExperience" placeholder="Pengalaman (contoh: 5 tahun)">
+      <input type="text" id="guideWhatsapp" placeholder="Nomor WhatsApp (contoh: 628xxxxxx)">
+      <button onclick="addGuide()">Tambah Guide</button>
+    </div>
+
+    <h2 class="section-title">Daftar Guide</h2>
+    <div class="scroll-container" id="adminGuideList"></div>
+
+    <div class="footer">
+      ©copyright MELANCARAN - Online Bali Tour
+    </div>
+
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

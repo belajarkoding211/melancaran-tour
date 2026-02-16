@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body onload="checkRole('admin')">
+
+<div class="navbar">
+  <a href="admin-dashboard.html">DASHBOARD</a>
+  <a href="admin-manage.html">KELOLA DATA</a>
+  <a href="destinations.html">KELOLA LOKASI</a>
+  <a href="guides.html">KELOLA GUIDE</a>
+  <a href="contact.html">KELOLA KONTAK</a>
+  <a href="#" onclick="logout()">LOGOUT</a>
+</div>
+
+
+<div class="main">
+  <div class="header">
+    <h1>Dashboard Admin</h1>
+    <p>Kelola destinasi wisata Bali, guide, dan user.</p>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <h3>Total User</h3>
+      <p>12 User terdaftar</p>
+    </div>
+
+    <div class="card">
+      <h3>Total Destinasi</h3>
+      <p>20 Destinasi Bali</p>
+    </div>
+
+    <div class="card">
+      <h3>Total Guides</h3>
+      <p>5 Guide aktif</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
